@@ -1,0 +1,31 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:FlashcardApp.ViewModels"
+             x:Class="FlashcardApp.Views.StudyFlashcardView">
+    <Grid Margin="20" RowDefinitions="Auto,Auto,Auto,*" ColumnDefinitions="*">
+        <!-- 标题区域 -->
+        <TextBlock Text="学习抽认卡" FontSize="24" Margin="0,0,0,20" Grid.Row="0" HorizontalAlignment="Center"/>
+
+        <!-- 抽认卡内容区域 -->
+        <Border Grid.Row="1" BorderBrush="#CCC" BorderThickness="1" Padding="20" CornerRadius="5">
+            <StackPanel>
+                <TextBlock Text="{Binding FrontText}" FontSize="18" Margin="0,0,0,10"/>
+                <TextBox Text="{Binding UserInput}" Width="200" Margin="0,0,0,10"/>
+                <Button Content="检查答案" Command="{Binding CheckAnswerCommand}" Width="100" Margin="0,0,0,10"/>
+                <TextBlock Text="{Binding FeedbackMessage}" Foreground="Red" FontSize="16"/>
+            </StackPanel>
+        </Border>
+
+        <!-- 操作按钮区域：下一张/删除本张 -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,30,0,20" HorizontalAlignment="Center" Spacing="10">
+            <Button Content="下一张" Command="{Binding NextFlashcardCommand}" Width="100"/>
+            <Button Content="删除本张" Command="{Binding DeleteFlashcardCommand}" Width="100"/>
+        </StackPanel>
+
+        <!-- 返回主界面与统计按钮 -->
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Spacing="10">
+            <Button Content="添加卡片" Command="{Binding BackToMainCommand}" Width="100"/>
+            <Button Content="查看统计" Command="{Binding ViewStatsCommand}" Width="100"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

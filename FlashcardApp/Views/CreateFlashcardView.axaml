@@ -1,0 +1,19 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FlashcardApp.Views.CreateFlashcardView"
+             xmlns:vm="clr-namespace:FlashcardApp.ViewModels">
+    
+    <StackPanel Margin="20">
+        <TextBlock Text="创建新的抽认卡" FontSize="24" Margin="0,0,0,20"/>
+        <TextBlock Text="正面（提示）"/>
+        <TextBox Text="{Binding FrontText}" Height="100" AcceptsReturn="True"/>
+        <TextBlock Text="反面（答案）" Margin="0,10,0,0"/>
+        <TextBox Text="{Binding BackText}" Height="100" AcceptsReturn="True"/>
+        <TextBlock Text="{Binding StatusMessage}" Foreground="Red" Margin="0,10,0,0"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0" Spacing="10">
+            <Button Content="添加抽认卡" Command="{Binding AddFlashcardCommand}"/>
+            <Button Content="返回" Command="{Binding BackToMainCommand}"/>
+            <Button Content="批量导入JSON" Command="{Binding ImportFromJsonCommand}"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>

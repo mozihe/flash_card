@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>FlashcardApp</RootNamespace>
+        <TargetFramework>net8.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Avalonia" Version="11.2.0" />
+      <PackageReference Include="Avalonia.Desktop" Version="11.2.0" />
+      <PackageReference Include="Avalonia.ReactiveUI" Version="11.2.0" />
+      <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.0" />
+      <PackageReference Include="Avalonia.X11" Version="11.2.0" />
+      <PackageReference Include="LiveChartsCore.SkiaSharpView.Avalonia" Version="2.0.0-rc4.5" />
+      <PackageReference Include="MySql.Data" Version="9.1.0" />
+      <PackageReference Include="OxyPlot.Avalonia" Version="2.1.0" />
+      <PackageReference Include="OxyPlot.Core" Version="2.2.0" />
+    </ItemGroup>
+
+</Project>
